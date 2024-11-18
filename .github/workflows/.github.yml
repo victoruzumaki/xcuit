@@ -23,12 +23,6 @@ jobs:
     - name: Install Fastlane
       run: gem install fastlane
 
-    - name: Set up Xcode 10.1
-      run: sudo xcode-select -s /Applications/Xcode_10.1.app
-
-    - name: Install Dependencies (if needed)
-      run: |
-        bundle install  # If you have a Gemfile, use bundler to install dependencies
 
     - name: Run Tests with Fastlane
       run: fastlane scan --scheme TAU --device "iPhone XR"
